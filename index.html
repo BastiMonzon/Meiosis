@@ -21,7 +21,11 @@
       </section>
       <button onclick="generate()" class="btn">Generate</button>
       <script>
-        
+      document.getElementById('btn').onkeypress=function(e){
+        if(e.keyCode==13){
+            document.getElementById('linkadd').click();
+        }
+      }
         function generate(){
           var val = document.getElementById('chromosomes').value;
           alert(val);
