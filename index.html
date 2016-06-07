@@ -16,10 +16,17 @@
       <section class="generator">
         <form>
           Start Chromosomes:<br>
-          <input type="text" name="chromosomes">
+          <input type="text" name="chromosomes" id="chromosomes">
         </form>
       </section>
-      <a href="https://github.com/BastiMonzon/Meiosis" class="btn">Generate</a>
+      <button onclick="generate()" class="btn">Generate</button>
+      <script>
+        val = document.getElementById('chromosomes').value;
+        function generate(val){
+          alert(val);
+        }
+      </script>
     </section>
+    
   </body>
 </html>
