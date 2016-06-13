@@ -21,13 +21,21 @@
         <button class="btn" id="button1">Generate</button>
         <script type="text/javascript">
           document.getElementById("button1").addEventListener('click', function () {
-              var text = document.getElementById('Interphase');
-              text.innerHTML = ("Interphase: Parent cell contains " + document.getElementById("chromosomes").value + " chromosomes and is haploid");
+              if(document.getElementById("chromosomes").value % 2 === 0){
+                var text = document.getElementById('Interphase');
+                text.innerHTML = ("Interphase: Parent cell contains " + document.getElementById("chromosomes").value + " chromosomes and is haploid.");
+                var text = document.getElementById('Prophase');
+                text.innerHTML = ("Prophase: Parent chromosomes grow duplicates, resulting in a diploid cell. chromosomes 'cross over' (mix genes). This results in " + (document.getElementById("chromosomes").value * 2) + " chromosomes.");
+                var text = document.getElementById('Interphase2');
+                text.innerHTML = ("Interphase 2: Two cells form with " + document.getElementById("chromosomes").value + " chromosomes");
+                var text = document.getElementById('Cytokinesis');
+                text.innerHTML = ("Cytokinesis: 4 cells are formed, each with different DNA. These are sex cells. Each cell contains " + (document.getElementById("chromosomes").value / 2) + " chromosomes.");
+              }
           });
         </script>
         <div id="Start">
           <p id="Interphase">Interphase: Parent cell contains __ chromosomes and is haploid</p>
-          <p>Prophase: Parent chromosomes grow duplicates, resulting in a diploid cell. chromosomes "cross over" (mix genes).</p>
+          <p id="Prophase">Prophase: Parent chromosomes grow duplicates, resulting in a diploid cell. chromosomes "cross over" (mix genes). This results in __ chromosomes</p>
           <p>Prometaphase: Nucleus dissolves and Microtubules attatch to chromosomes.</p>
         </div>
         <div id="M1">
@@ -37,13 +45,13 @@
           
         </div>
         <div id="M2">
-          <p>Interphase 2: Two cells form with the same number of chromosomes as the parent cell.</p>
+          <p id="Interphase2">Interphase 2: Two cells form with __ chromosomes</p>
           <p>Metaphase 2: Microtubules attach to centromeres and chromosomes.</p>
           <p>Anaphase 2: Chromosomes are pulled apart.</p>
           <p>Telophase 2: cell division beghins.</p>
         </div>
         <div id="End">
-          <p>Cytokinesis: 4 cells are formed, each with different DNA. These are sex cells.</p>
+          <p id="Cytokinesis">Cytokinesis: 4 cells are formed, each with different DNA. These are sex cells. Each cell contains __ chromosomes.</p>
         </div>
       </section>
       
