@@ -18,10 +18,15 @@
           Start Chromosomes:<br>
           <input type="text" name="chromosomes" id="chromosomes">
         </form>
-        <button onclick="generate()" class="btn">Generate</button>
+        <button class="btn" id="button1">Generate</button>
+        <script type="text/javascript">
+          document.getElementById("button1").addEventListener('click', function () {
+              var text = document.getElementById('Interphase');
+              text.text = ("Interphase: Parent cell contains " + document.getElementById("chromosomes").value + " number of chromosomes and is haploid");
+          });
+        </script>
         <div id="Start">
-          <p><script type="text/javascript"></script></p>
-          <p>Interphase: Parent cell contains ___ number of chromosomes and is haploid</p>
+          <p id="Interphase"></p>
           <p>Prophase: Parent chromosomes grow duplicates, resulting in a diploid cell. chromosomes "cross over" (mix genes).</p>
           <p>Prometaphase: Nucleus dissolves and Microtubules attatch to chromosomes.</p>
         </div>
