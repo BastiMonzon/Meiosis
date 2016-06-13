@@ -21,14 +21,26 @@
       </section>
       <button onclick="generate()" class="btn">Generate</button>
       <script>
-      document.getElementById('btn').onkeypress=function(e){
-        if(e.keyCode==13){
-            document.getElementById('linkadd').click();
+        function Start(){
+          document.getElementById('generator').innerHTML.appendChild("<p>Parent chromosomes grow duplicates, resulting in a diploid cell.</p><p>Next, chromosomes align at middle of the cell after crossing over (mixing genes) and split in half.</p>")
         }
-      }
+        function M1(){
+          
+        }
+        function M2(){
+          
+        }
+        function End(){
+          
+        }
         function generate(){
           var val = document.getElementById('chromosomes').value;
           alert(val);
+          setTimeout(Start(), 2000);
+          setTimeout(M1(), 2000);
+          setTimeout(M2(), 2000);
+          setTimeout(End(), 2000);
+
         }
       </script>
     </section>
