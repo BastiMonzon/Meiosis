@@ -20,8 +20,14 @@
         </form>
         <button onclick="generate()" class="btn">Generate</button>
         <div id="Start">
-          <p><script type="text/javascript">document.write("Interphase: Parent cell contains " + function generate(){document.getElementById('chromosomes').value} + " chromosomes and is haploid")</script></p>
+          <p><script type="text/javascript">document.write("Interphase: Parent cell contains " + document.getElementById('chromosomes').value + " chromosomes and is haploid")</script></p>
           <p>Interphase: Parent cell contains ... number of chromosomes and is haploid</p>
+          <?PHP
+            
+            $chromosomes = $_POST['chromosomes'];
+            print ("Interphase: Parent cell contains " + $chromosomes +" number of chromosomes and is haploid");
+            
+          ?>
           <p>Prophase: Parent chromosomes grow duplicates, resulting in a diploid cell. chromosomes "cross over" (mix genes).</p>
           <p>Prometaphase: Nucleus dissolves and Microtubules attatch to chromosomes.</p>
         </div>
