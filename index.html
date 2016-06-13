@@ -23,9 +23,9 @@
           document.getElementById("button1").addEventListener('click', function () {
               if(document.getElementById("chromosomes").value % 2 === 0){
                 var text = document.getElementById('Interphase');
-                text.innerHTML = ("Interphase: Parent cell contains " + document.getElementById("chromosomes").value + " chromosomes and is haploid.");
+                text.innerHTML = ("Interphase: Parent cell contains " + document.getElementById("chromosomes").value + " chromosomes and is diploid.");
                 var text = document.getElementById('Prophase');
-                text.innerHTML = ("Prophase: Parent chromosomes grow duplicates, resulting in a diploid cell. chromosomes 'cross over' (mix genes). This results in " + (document.getElementById("chromosomes").value * 2) + " chromosomes.");
+                text.innerHTML = ("Prophase: Parent chromosomes grow duplicates. chromosomes 'cross over' (mix genes). This results in " + (document.getElementById("chromosomes").value * 2) + " chromosomes.");
                 var text = document.getElementById('Interphase2');
                 text.innerHTML = ("Interphase 2: Two cells form with " + document.getElementById("chromosomes").value + " chromosomes");
                 var text = document.getElementById('Cytokinesis');
@@ -34,8 +34,8 @@
           });
         </script>
         <div id="Start">
-          <p id="Interphase">Interphase: Parent cell contains __ chromosomes and is haploid</p>
-          <p id="Prophase">Prophase: Parent chromosomes grow duplicates, resulting in a diploid cell. chromosomes "cross over" (mix genes). This results in __ chromosomes</p>
+          <p id="Interphase">Interphase: Parent cell contains __ chromosomes and is diploid.</p>
+          <p id="Prophase">Prophase: Parent chromosomes grow duplicates. chromosomes "cross over" (mix genes). This results in __ chromosomes</p>
           <p>Prometaphase: Nucleus dissolves and Microtubules attatch to chromosomes.</p>
         </div>
         <div id="M1">
